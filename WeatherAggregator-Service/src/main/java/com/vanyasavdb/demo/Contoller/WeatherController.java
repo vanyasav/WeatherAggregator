@@ -2,7 +2,10 @@ package com.vanyasavdb.demo.Contoller;
 
 import com.vanyasavdb.demo.domain.WeatherClass;
 import com.vanyasavdb.demo.service.WeatherService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
@@ -29,10 +32,4 @@ public class WeatherController {
         return weatherService.listCities();
     }
 
-
-    @RequestMapping("/")
-    public @ResponseBody
-    String greeting() {
-        return "Hello, World";
-    }
 }
