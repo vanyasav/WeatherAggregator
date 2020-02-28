@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -246,7 +246,7 @@
       <workItem from="1582891862236" duration="2705000" />
       <workItem from="1582894745864" duration="639000" />
       <workItem from="1582896235932" duration="2965000" />
-      <workItem from="1582899259305" duration="3642000" />
+      <workItem from="1582899259305" duration="4404000" />
     </task>
     <task id="LOCAL-00001" summary="Начальная настройка">
       <created>1582902066390</created>
@@ -291,7 +291,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12099000" />
+    <option name="totallyTimeSpent" value="12861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,6 +304,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -544,8 +545,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
