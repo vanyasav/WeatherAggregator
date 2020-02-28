@@ -1,0 +1,14 @@
+com\vanyasavdb\demo\domain\Clouds.class
+com\vanyasavdb\demo\domain\Main.class
+com\vanyasavdb\demo\service\WeatherService.class
+com\vanyasavdb\demo\DemoApplication.class
+com\vanyasavdb\demo\Main\GetWeather.class
+com\vanyasavdb\demo\domain\Weather.class
+com\vanyasavdb\demo\domain\Rain.class
+com\vanyasavdb\demo\domain\WeatherClass.class
+com\vanyasavdb\demo\domain\Wind.class
+com\vanyasavdb\demo\Main\GetWeather$1.class
+com\vanyasavdb\demo\domain\Sys.class
+com\vanyasavdb\demo\domain\Coord.class
+com\vanyasavdb\demo\Contoller\WeatherController.class
+com\vanyasavdb\demo\repository\WeatherRepository.class
