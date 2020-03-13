@@ -36,7 +36,8 @@ public class GetWeather {
         FileInputStream fis;
         Properties property = new Properties();
         try {
-            fis = new FileInputStream("C:\\Users\\savilov\\Documents\\WeatherAggregator\\WeatherAggregator-Service\\src\\main\\resources\\citiesList\\config.properties");
+            String localDir = System.getProperty("user.dir");
+            fis = new FileInputStream(localDir+ "\\WeatherAggregator-Service\\src\\main\\resources\\citiesList\\config.properties");
             property.load(fis);
             String citiesString = property.getProperty("cities.list");
             String[] citiesList;

@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WeatherAggregatorUI" />
         <module name="WeatherAggregatorService" />
+        <module name="WeatherAggregator-Service" />
+        <module name="WeatherAggregatorUI" />
+        <module name="WeatherAggregator-UI" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="WeatherAggregator" options="-parameters" />
+      <module name="WeatherAggregator-Service" options="-parameters" />
+      <module name="WeatherAggregator-UI" options="-parameters" />
       <module name="WeatherAggregatorService" options="-parameters" />
       <module name="WeatherAggregatorUI" options="-parameters" />
     </option>
