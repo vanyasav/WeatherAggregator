@@ -51,6 +51,99 @@ public class GetWeather {
 
     private WeatherService weatherService;
 
+    private void parseClouds(Elements elements) {
+        for (Element element : elements) {
+            //Выделяем информацию об облаках
+            String elem = element.attr("onmouseover");
+            int j = elem.indexOf("облак");
+            String clouds1 = elem.substring(j);
+            int k = clouds1.indexOf('\'');
+            String cloud2 = elem.substring(j, j + k - 1);
+
+            System.out.println(cloud2);
+
+            //Ищем облака вертикального развития
+            String cloudFinal;
+            if (cloud2.contains("облака вертикального развития")) {
+                j = cloud2.indexOf(',');
+                cloudFinal = cloud2.substring(j + 2);
+            } else {
+                cloudFinal = cloud2;
+            }
+
+            //Ищем облака нижнего яруса
+            String lowCloud;
+            String cloud3;
+            if (cloudFinal.contains("нижнего яруса")) {
+                j = cloudFinal.indexOf("са ");
+                k = cloudFinal.indexOf("%");
+                lowCloud = cloudFinal.substring(j + 3, k);
+                cloud3 = cloudFinal.substring(k + 3);
+                //System.out.println("cloud3: " + cloud3);
+            } else {
+                lowCloud = "0";
+                cloud3 = cloudFinal;
+                //System.out.println("cloud3: " + cloud3);
+            }
+
+            //Ищем облака среднего яруса
+            String middleCloud;
+            String cloud4;
+            if (cloud3.contains("среднего яруса")) {
+                j = cloud3.indexOf("са ");
+                k = cloud3.indexOf("%");
+                middleCloud = cloud3.substring(j + 3, k);
+                cloud4 = cloud3.substring(k + 3);
+                //System.out.println("cloud4: " + cloud4);
+                //System.out.println(middleCloud);
+            } else {
+                middleCloud = "0";
+                cloud4 = cloud3;
+                //System.out.println("cloud4: " + cloud4);
+            }
+
+            String topCloud;
+            if (cloud4.contains("верхнего яруса")) {
+                j = cloud4.indexOf("са ");
+                k = cloud4.indexOf("%");
+                topCloud = cloud4.substring(j + 3, k);
+                //System.out.println(topCloud);
+            } else {
+                topCloud = "0";
+                //System.out.println("cloud4: " + cloud4);
+            }
+            System.out.println("НИЖНИЙ ЯРУС=" + lowCloud + ", СРЕДНИЙ ЯРУС=" + middleCloud + ", ВЕРХНИЙ ЯРУС=" + topCloud);
+        }
+    }
+
+
+    private void parseSpeed(Elements elements) {
+        for (Element element : elements) {
+            //Выделяем информацию об облаках
+            String elem = element.attr("onmouseover");
+            //System.out.println(elem);
+            if (elem == "")
+                break;
+            int j = elem.indexOf('\'');
+            int k = elem.indexOf(')');
+            String data = elem.substring(j + 1, k);
+            j = data.indexOf('(');
+            k = data.indexOf("м/с");
+            String speed = data.substring(j + 1, k - 1);
+            String gust = "";
+            if (elem.contains("порывы")) {
+                j = elem.indexOf("порывы");
+                data = elem.substring(j);
+                j = elem.indexOf('\'');
+                gust = data.substring(7, j - 5);
+                System.out.println("СКОРОСТЬ ВЕТРА: " + speed + " м/с" + ", ПОРЫВЫ ВЕТРА: " + gust + " м/с");
+                //System.out.println(data);
+            }
+            if (gust == "")
+                System.out.println("СКОРОСТЬ ВЕТРА: " + speed + " м/с");
+        }
+
+    }
     public void testFunction() {
         try {
 
@@ -63,83 +156,23 @@ public class GetWeather {
              .referrer("http://www.google.com")
              .get();
              **/
-            Elements elements = doc.select("#forecastTable_1 div.cc_0 div");
-            for (Element element : elements) {
-                //Выделяем информацию об облаках
-                String elem = element.attr("onmouseover");
-                int j = elem.indexOf("облак");
-                String clouds1 = elem.substring(j);
-                int k = clouds1.indexOf('\'');
-                String cloud2 = elem.substring(j, j + k - 1);
+            //parseClouds(doc.select("#forecastTable_1 div.cc_0 div"));
 
-                System.out.println(cloud2);
+            parseSpeed(doc.select("#forecastTable_1 div.wv_0"));
 
-                //Ищем облака вертикального развития
-                String cloudFinal;
-                if (cloud2.contains("облака вертикального развития")) {
-                    j = cloud2.indexOf(',');
-                    cloudFinal = cloud2.substring(j + 2);
-                } else {
-                    cloudFinal = cloud2;
-                }
 
-                //Ищем облака нижнего яруса
-                String lowCloud;
-                String cloud3;
-                if (cloudFinal.contains("нижнего яруса")) {
-                    j = cloudFinal.indexOf("са ");
-                    k = cloudFinal.indexOf("%");
-                    lowCloud = cloudFinal.substring(j + 3, k);
-                    cloud3 = cloudFinal.substring(k + 3);
-                    //System.out.println("cloud3: " + cloud3);
-                } else {
-                    lowCloud = "0";
-                    cloud3 = cloudFinal;
-                    //System.out.println("cloud3: " + cloud3);
-                }
-
-                //Ищем облака среднего яруса
-                String middleCloud;
-                String cloud4;
-                if (cloud3.contains("среднего яруса")) {
-                    j = cloud3.indexOf("са ");
-                    k = cloud3.indexOf("%");
-                    middleCloud = cloud3.substring(j + 3, k);
-                    cloud4 = cloud3.substring(k + 3);
-                    //System.out.println("cloud4: " + cloud4);
-                    //System.out.println(middleCloud);
-                } else {
-                    middleCloud = "0";
-                    cloud4 = cloud3;
-                    //System.out.println("cloud4: " + cloud4);
-                }
-
-                String topCloud;
-                if (cloud4.contains("верхнего яруса")) {
-                    j = cloud4.indexOf("са ");
-                    k = cloud4.indexOf("%");
-                    topCloud = cloud4.substring(j + 3, k);
-                    //System.out.println(topCloud);
-                } else {
-                    topCloud = "0";
-                    //System.out.println("cloud4: " + cloud4);
-                }
-                System.out.println("НИЖНИЙ ЯРУС=" + lowCloud + ", СРЕДНИЙ ЯРУС=" + middleCloud + ", ВЕРХНИЙ ЯРУС=" + topCloud);
-            }
         } catch (IOException e) {
             System.out.println("Unable to get data");
         }
 
     }
 
-
-
     @Autowired
     private GetWeather(WeatherService weatherService) {
         this.weatherService = weatherService;
     }
 
-    //Каждые 30 минут вызываем saveWeather для каждого города из спика
+    //Каждые 30 минут вызываем saveWeather для каждого города из списка
     //@Scheduled(fixedRate = 10000)
     @Scheduled(fixedRate = 1800000)
     private void saveWeatherForAllCities(){
