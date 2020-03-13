@@ -2,9 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98363a48-ed0c-400d-8b62-affb287b076b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/static/styles-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/WeatherAggregator-Service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/WeatherAggregator-Service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/WeatherAggregator-Service-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/WeatherAggregator-Service-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Contoller/WeatherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Contoller/WeatherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/static/styles-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/TEST-com.vanyasavdb.demo.Contoller.WeatherControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/TEST-com.vanyasavdb.demo.Contoller.WeatherControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/TEST-com.vanyasavdb.demo.DemoApplicationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/TEST-com.vanyasavdb.demo.DemoApplicationTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/TEST-com.vanyasavdb.demo.repository.WeatherRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/TEST-com.vanyasavdb.demo.repository.WeatherRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/com.vanyasavdb.demo.Contoller.WeatherControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/com.vanyasavdb.demo.Contoller.WeatherControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/com.vanyasavdb.demo.DemoApplicationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/com.vanyasavdb.demo.DemoApplicationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/com.vanyasavdb.demo.repository.WeatherRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/surefire-reports/com.vanyasavdb.demo.repository.WeatherRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-UI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-UI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-UI/target/WeatherAggregator-UI-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-UI/target/WeatherAggregator-UI-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,17 +59,54 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app.component.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="306">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+              <folding>
+                <element signature="e#743#744#0" expanded="true" />
+                <element signature="e#809#810#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="65" column="77" lean-forward="true" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
+              <folding>
+                <element signature="e#5528#5529#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/test.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -57,10 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WeatherAggregator-Service/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/WeatherAggregator-UI/pom.xml" />
-        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java" />
         <option value="$PROJECT_DIR$/WeatherAggregator-UI/angular.json" />
         <option value="$PROJECT_DIR$/WeatherAggregator-UI/package.json" />
         <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherClass.java" />
@@ -69,6 +127,13 @@
         <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/test/resources/schema.sql" />
         <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/DemoApplicationTest.java" />
         <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/Contoller/WeatherControllerTest.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Contoller/WeatherController.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/ServletInitializer.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-UI/pom.xml" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java" />
       </list>
     </option>
   </component>
@@ -78,6 +143,22 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="WeatherAggregator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="WeatherAggregator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="462" />
@@ -91,6 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,12 +181,36 @@
               <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -147,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WeatherRepositoryTest">
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="WeatherControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WeatherAggregatorService" />
       <extension name="coverage">
@@ -230,10 +337,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.DemoApplication" />
         <item itemvalue="JUnit.WeatherRepositoryTest" />
         <item itemvalue="JUnit.WeatherRepositoryTest (1)" />
         <item itemvalue="JUnit.WeatherControllerTest" />
-        <item itemvalue="Spring Boot.DemoApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +358,14 @@
       <workItem from="1582891862236" duration="2705000" />
       <workItem from="1582894745864" duration="639000" />
       <workItem from="1582896235932" duration="2965000" />
-      <workItem from="1582899259305" duration="4428000" />
+      <workItem from="1582899259305" duration="5151000" />
+      <workItem from="1583234590136" duration="11338000" />
+      <workItem from="1583248038294" duration="3830000" />
+      <workItem from="1583419116801" duration="2335000" />
+      <workItem from="1583834055267" duration="613000" />
+      <workItem from="1583846652269" duration="1727000" />
+      <workItem from="1584100224808" duration="611000" />
+      <workItem from="1584101759664" duration="9295000" />
     </task>
     <task id="LOCAL-00001" summary="Начальная настройка">
       <created>1582902066390</created>
@@ -260,13 +374,17 @@
       <option name="project" value="LOCAL" />
       <updated>1582902066390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Удаление тестового приветствия">
+      <created>1582907473574</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582907473574</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WeatherRepositoryTest_(1) - 2020.02.28 at 17h 11m 28s.xml">
-      <configuration name="WeatherRepositoryTest (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="WeatherRepositoryTest - 2020.02.28 at 17h 24m 43s.xml">
       <configuration name="WeatherRepositoryTest" configurationId="JUnit" />
     </history-entry>
@@ -294,9 +412,12 @@
     <history-entry file="WeatherRepositoryTest - 2020.02.28 at 17h 46m 44s.xml">
       <configuration name="WeatherRepositoryTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WeatherRepositoryTest - 2020.03.03 at 17h 52m 16s.xml">
+      <configuration name="WeatherRepositoryTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12885000" />
+    <option name="totallyTimeSpent" value="43357000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -309,8 +430,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2803838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -318,28 +440,28 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8118337" weight="0.70964247" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8118337" visible="true" weight="0.44637054" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.9173774" weight="0.5731311" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.9173774" weight="0.23076923" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.1881663" side_tool="true" weight="0.6251354" />
-      <window_info anchor="bottom" id="Spring" order="12" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.32936078" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32936078" />
+      <window_info anchor="bottom" id="TypeScript" order="15" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.09594883" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
@@ -361,7 +483,8 @@
       <path value="$PROJECT_DIR$/WeatherAggregator-UI" />
     </ignored-roots>
     <MESSAGE value="Начальная настройка" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начальная настройка" />
+    <MESSAGE value="Удаление тестового приветствия" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удаление тестового приветствия" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -379,38 +502,10 @@
     <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/citiesList/config.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/service/WeatherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Clouds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Coord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Contoller/WeatherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -428,83 +523,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WeatherAggregator.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/WeatherAggregatorService.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/TestWeatherClass.java" />
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/repository/WeatherRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#119#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Sys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Wind.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Weather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -522,17 +548,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/Contoller/WeatherControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/ServletInitializer.java" />
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/WeatherAggregatorService.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/tslint.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/repository/WeatherRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/service/WeatherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Weather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Sys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Clouds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/repository/WeatherRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
+        <state relative-caret-position="697">
           <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/data-table/data-table.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/data.service.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -543,17 +660,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/DemoApplicationTest.java">
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="102">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/app.component.html">
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/Contoller/WeatherControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="221">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/DemoApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Contoller/WeatherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-UI/src/app/data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="57" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/test.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="65" column="77" lean-forward="true" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
+          <folding>
+            <element signature="e#5528#5529#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -15,12 +15,14 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
+
     @Bean
     @Profile("!test")
     CommandLineRunner runner(GetWeather getWeather){
         return args -> {
             //Вызываем функцию для получения списка городов
             getWeather.getCities();
+            getWeather.testFunction();
         };
     }
 }

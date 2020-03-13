@@ -13,6 +13,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="WeatherAggregator" options="-parameters" />
       <module name="WeatherAggregatorService" options="-parameters" />
       <module name="WeatherAggregatorUI" options="-parameters" />
     </option>
