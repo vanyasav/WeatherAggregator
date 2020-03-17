@@ -1,10 +1,9 @@
 package com.vanyasavdb.demo.service;
 
 
-import com.vanyasavdb.demo.domain.WeatherClass;
+import com.vanyasavdb.demo.domain.WeatherEntity;
 import com.vanyasavdb.demo.repository.WeatherRepository;
 import org.springframework.stereotype.Service;
-
 
 import java.util.List;
 
@@ -17,15 +16,18 @@ public class WeatherService {
         this.weatherRepository = weatherRepository;
     }
 
-    public Iterable<WeatherClass> list() {
+    public Iterable<WeatherEntity> list() {
         return weatherRepository.findAll();
     }
 
-    public Iterable<WeatherClass> listCities() {
-        return weatherRepository.findCities();
+    public void saveList(List<WeatherEntity> weatherEntities) {
+        weatherRepository.saveAll(weatherEntities);
     }
 
-    public void save(List<WeatherClass> weatherClasses) {
-        weatherRepository.saveAll(weatherClasses);
+    public void save(WeatherEntity weatherEntity) {
+        weatherRepository.save(weatherEntity);
     }
+
 }
+
+

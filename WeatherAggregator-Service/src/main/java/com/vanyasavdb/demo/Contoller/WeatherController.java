@@ -1,6 +1,6 @@
 package com.vanyasavdb.demo.Contoller;
 
-import com.vanyasavdb.demo.domain.WeatherClass;
+import com.vanyasavdb.demo.domain.WeatherEntity;
 import com.vanyasavdb.demo.service.WeatherService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,15 +21,7 @@ public class WeatherController {
     //Ссыслка для получения всех данных
     @CrossOrigin
     @GetMapping("/list")
-    public Iterable<WeatherClass> list() {
+    public Iterable<WeatherEntity> list() {
         return weatherService.list();
     }
-
-    //Ссылка для получения списка городов
-    @CrossOrigin
-    @GetMapping("/listcustom")
-    public Iterable<WeatherClass> listCities() {
-        return weatherService.listCities();
-    }
-
 }

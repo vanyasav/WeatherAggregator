@@ -2,201 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98363a48-ed0c-400d-8b62-affb287b076b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/12351850385383758868" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/300x600_google_beauty.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/300x600_google_beauty.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/523231154479086061" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/7926.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/AuthenticationService.Authenticate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/Enqz_20U.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/UFYwWwmt.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/ads(1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/ads(2).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/ads.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/adview" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/amp-ad-exit-0.1.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/amp-analytics-0.1.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/amp-animation-0.1.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/amp-fit-text-0.1.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/amp-form-0.1.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/amp4ads-host-v0.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/amp4ads-v0.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/browser.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/common.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/cookie_push(1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/cookie_push.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/d04074658525060c338e02e6292a36bc.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/express_html_inpage_rendering_lib_200_264.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(1).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(10).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(11).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(12).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(2).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(3).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(4).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(5).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(6).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(7).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(8).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f(9).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/f.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/ga.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/gen_204" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/geo_vidget.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/googlemap.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/iconArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/ide_cookie" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/infobubble.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/jquery-1.6.4.min.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/jquery.autocomplete.01.cr.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/jquery.autocomplete.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/l" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/l(1)" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/logoPrint.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/main.016.cr.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/mainStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/maps.006.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/ngnpNuTQia9-adWoQUjidzybGxpVXp56Dx9ra3RUBDA.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/osd.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/osd_listener.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/pixel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/pixel(1)" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/pixel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/publishertag.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/rcs.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/reQR.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/rp5hint.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/ru.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/s.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/saved_resource(1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/saved_resource(2).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/saved_resource(3).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/saved_resource(4).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/saved_resource(5).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/saved_resource.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/sprites.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/util.js.Без названия" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/weather_files/zrt_lookup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WeatherAggregator.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vladmihalcea_hibernate_types_52_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_awaitility_awaitility_3_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_10_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_18_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/WeatherAggregator-Service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Contoller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Contoller/WeatherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/repository/WeatherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/repository/WeatherRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/service/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/repository/WeatherRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/repository/WeatherRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Contoller/WeatherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Contoller/WeatherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/Main/GetWeather.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherAggregator-UI/WeatherAggregator-UI.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/repository/WeatherRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/repository/WeatherRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/service/WeatherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/classes/com/vanyasavdb/demo/service/WeatherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherAggregator-Service/target/test-classes/com/vanyasavdb/demo/repository/WeatherRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherAggregator-Service/target/test-classes/com/vanyasavdb/demo/repository/WeatherRepositoryTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,6 +41,47 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/repository/WeatherRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="211" column="27" lean-forward="true" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="27" />
+              <folding>
+                <element signature="e#13971#13972#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>out</find>
@@ -229,6 +90,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/repository/WeatherRepository.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/service/WeatherService.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Contoller/WeatherController.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/repository/WeatherRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherEntity.java" />
+        <option value="$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java" />
+      </list>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -236,9 +110,139 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="WeatherAggregator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="462" />
+    <option name="y" value="134" />
+    <option name="width" value="1588" />
+    <option name="height" value="1000" />
+  </component>
   <component name="ProjectId" id="1YU9Lu1Ag0zDLreMbY0WPuJrwv0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Contoller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherAggregator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherAggregator" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherAggregator-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -282,7 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="DemoApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WeatherAggregator-Service" />
       <extension name="coverage">
@@ -293,21 +297,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.vanyasavdb.demo" />
       <option name="MAIN_CLASS_NAME" value="com.vanyasavdb.demo.DemoApplicationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeatherControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WeatherAggregatorService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vanyasavdb.demo.Contoller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vanyasavdb.demo.Contoller" />
-      <option name="MAIN_CLASS_NAME" value="com.vanyasavdb.demo.Contoller.WeatherControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -368,6 +357,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="WeatherAggregatorService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vanyasavdb.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vanyasavdb.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Angular CLI Server (WeatherAggregator-UI)" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/WeatherAggregator-UI/package.json" />
       <command value="run" />
@@ -380,11 +382,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.DemoApplication" />
         <item itemvalue="Spring Boot.DemoApplication (1)" />
         <item itemvalue="JUnit.DemoApplicationTest" />
         <item itemvalue="JUnit.WeatherRepositoryTest" />
         <item itemvalue="JUnit.WeatherRepositoryTest (1)" />
-        <item itemvalue="JUnit.WeatherControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -416,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582902066390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added direction parse">
+      <created>1584446289299</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584446289299</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -451,6 +460,49 @@
       <configuration name="WeatherRepositoryTest" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12820000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.81023455" visible="true" weight="0.1603467" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31852654" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.9173774" weight="0.23076923" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.18976545" side_tool="true" visible="true" weight="0.1603467" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.32936078" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4989339" weight="0.30552545" />
+      <window_info anchor="bottom" id="TypeScript" order="15" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.09594883" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
@@ -466,8 +518,28 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -480,10 +552,110 @@
       <path value="$PROJECT_DIR$/WeatherAggregator-UI" />
     </ignored-roots>
     <MESSAGE value="Начальная настройка" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начальная настройка" />
+    <MESSAGE value="Added direction parse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added direction parse" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Weather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Sys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/Wind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/test/java/com/vanyasavdb/demo/repository/WeatherRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.2.4.RELEASE/spring-boot-2.2.4.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/service/WeatherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Contoller/WeatherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.2.4.RELEASE/spring-boot-devtools-2.2.4.RELEASE.jar!/org/springframework/boot/devtools/restart/RestartLauncher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/repository/WeatherRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/domain/WeatherEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherAggregator-Service/src/main/java/com/vanyasavdb/demo/Main/GetWeather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="211" column="27" lean-forward="true" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="27" />
+          <folding>
+            <element signature="e#13971#13972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
