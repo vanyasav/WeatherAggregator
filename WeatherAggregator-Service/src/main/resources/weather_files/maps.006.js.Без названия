@@ -1,0 +1,1378 @@
+var contentString;
+var map;
+USGSOverlay.prototype = new google.maps.OverlayView();
+var currTemp;
+var div_class;
+var url;
+var latitude, longitude;
+var index = 0;
+var Indexes = [];
+var start_zoom = 1;
+var zoom = 0;
+var markers_zoom = [];
+var overlays_zoom = [];
+var INFO = [];
+var town_name = '';
+var town_name_alt = '';
+var value_t = getCookie('value_t');
+var lang_now;
+var error_flag = false;
+var zoom_flag = true;
+var timeout_flag = false;
+timeout = 50;
+var browser = BrowserDetect.browser.toLowerCase();
+var country_id;
+var once = false;
+var curr_class;
+var type = getCookie('color_sheme');
+var color = "#34383d";
+var cur_color = '';
+// черный  - #34383d;
+var full_title = 10;
+var max_zoom = 11;
+var bounds;
+var southWest;
+var northEast;
+var STATUS = "PRODUCTION";
+var QUEUE;
+var bounds_ready = true;
+var LOCK = false;
+var legend_cook = getCookie('legend');
+var arab = '';
+
+var markerBubble;
+var infoBubble;
+
+
+var button = {
+    collapse: 0,
+    expand: 0
+};
+
+var lang = {
+    ru0: "Последние наблюдения за температурой воздуха (°C)",
+    ru1: "Последние наблюдения за температурой воздуха (°F)",
+    en0: "The latest observations of air temperature (°C)",
+    en1: "The latest observations of air temperature (°F)",
+    ro0: "Ultimele observări ale temperaturii aerului (°C)",
+    ro1: "Ultimele observări ale temperaturii aerului (°F)",
+    ua0: "Останні спостереження за температурою повітря (°C)",
+    ua1: "Останні спостереження за температурою повітря (°F)",
+    tr0: "Gözlemlenen son hava sıcaklıkları (°C)",
+    tr1: "Gözlemlenen son hava sıcaklıkları (°F)",
+    pt0: "Observações recentes de temperatura do ar atmosférico (°C)",
+    pt1: "Observações recentes de temperatura do ar atmosférico (°F)",
+    lv0: "Pēdējie gaisa temperatūras novērojumi (°C)",
+    lv1: "Pēdējie gaisa temperatūras novērojumi (°F)",
+    il0: this.en0,
+    il1: this.en1,
+    ar0: "آخر بيانات الرصد لدرجة حرارة الجو (°C)",
+    ar1: "آخر بيانات الرصد لدرجة حرارة الجو (°F)",
+    kz0: "Последние наблюдения за температурой воздуха (°C)",
+    kz1: "Последние наблюдения за температурой воздуха (°F)",
+    fr0: "Dernières observations de température de l'air (°C)",
+    fr1: "Denrières observations de température de l'air (°F)",
+    es0: "Recientes observaciones de la temperatura del aire (°C)",
+    es1: "Recientes observaciones de la temperatura del aire (°F)",
+    de0: "Die letzten Beobachtungen der Lufttemperatur (°C)",
+    de1: "Die letzten Beobachtungen der Lufttemperatur (°F)",
+    be0: "Апошнія назіранні за тэмпературай паветра (°C)",
+    be1: "Апошнія назіранні за тэмпературай паветра (°F)",
+    cn0: "对气温的最近观测 (°C)",
+    cn1: "对气温的最近观测 (°F)",
+    hi0: "हवा के तापमान की नवीनतम अवलोकन (°C)",
+    hi1: "हवा के तापमान की नवीनतम अवलोकन (°F)",
+    ko0: "기온의 최근 기상관측 (°C)",
+    ko1: "기온의 최근 기상관측 (°F)"
+};
+
+var meteo = ['محطة رصد جوي',
+    '气象站',
+    'Wetterstation',
+    'weather station',
+    'estación meteorológica',
+    'station météorologique',
+    'תחנת מזג אוויר', '기상 관측',
+    'meteoroloģiskā stacija',
+    'estação meteorológica',
+    'stație meteo',
+    'метеостанция',
+    'meteoroloji istasyonu',
+    'метеостанція',
+    'метеорологиялық станция',
+    'метэастанц',
+    'AWS'
+];
+
+var colors = {
+    red: "images/map/map_red.png",
+    redDanger1: "images/map/map_redDanger1.png",
+    redDanger2: "images/map/map_redDanger2.png",
+    redDanger3: "images/map/map_redDanger3.png",
+    redDanger4: "images/map/map_redDanger4.png",
+    blue: "images/map/map_blue.png",
+    blueDanger1: "images/map/map_blueDanger1.png",
+    blueDanger2: "images/map/map_blueDanger2.png",
+    blueDanger3: "images/map/map_blueDanger3.png",
+    black: "images/map/map_black.png"
+};
+
+var load = {
+    black: "images/map/loading2.GIF",
+    mixed: "images/map/loading.GIF",
+    bright: "images/map/loading2.GIF"
+};
+
+var legend_text_color = "<div id='legend' style='font-size:13px;padding: 0 0 0 15px;width: 805px;color: #000000; background:#ffffff; position:relative; top: 0; left: -16px;z-index:997;'>\
+    <table style='border-spacing: 0px'>\
+        <tr>\
+            <td><span style='color:#990033'>выше +54 °C</span></td>\
+            <td>— чрезвычайно опасно</td>\
+        </tr>\
+        <tr>\
+            <td><span style='color:#cc0000'>+42 — +54 °C</span></td>\
+            <td>— опасно</td>\
+        </tr>\
+        <tr>\
+            <td><span style='color:#ff3300'>+33 — +41 °C</span></td>\
+            <td>— предельно осторожно</td>\
+        </tr>\
+        <tr>\
+            <td><span style='color:#ff9900'>+27 — +32 °C</span></td>\
+            <td>— осторожно</td>\
+        </tr>\
+        <tr>\
+            <td><span style='color:#2b63a0'>-24</span> — <span style='color:#ff3300'>+26 °C</span></td>\
+            <td>— температуры, не считающиеся опасными</td>\
+        </tr>\
+        <tr>\
+            <td><span style='color:#00ccff'>-35 — -25 °C</span></td>\
+            <td>— сильный мороз</td>\
+        </tr>\
+        <tr>\
+            <td><span style='color:#0099ff'>-60 — -36 °C</span></td>\
+            <td>— опасность обморожения</td>\
+        </tr>\
+        <tr>\
+            <td><span style='color:#0033ff'>ниже -60 °C</span></td>\
+            <td>— большая опасность обморожения</td>\
+        </tr>\
+    </table></div>"
+
+var legend_text_black = "<div id='legend' style='font-size:13px;padding: 0 0 0 15px;width: 805px;color: #000000; background:#ffffff; position:relative; top: 0; left: -16px;z-index:997;'>\
+    <table style='border-spacing: 0px'>\
+        <tr>\
+            <td>выше +54 °C</td>\
+            <td>— чрезвычайно опасно</td>\
+        </tr>\
+        <tr>\
+            <td>+42 — +54 °C</td>\
+            <td>— опасно</td>\
+        </tr>\
+        <tr>\
+            <td>+33 — +41 °C</td>\
+            <td>— предельно осторожно</td>\
+        </tr>\
+        <tr>\
+            <td>+27 — +32 °C</td>\
+            <td>— осторожно</td>\
+        </tr>\
+        <tr>\
+            <td>-24 — +26 °C</td>\
+            <td>— температуры, не считающиеся опасными</td>\
+        </tr>\
+        <tr>\
+            <td>-35 — -25 °C</td>\
+            <td>— сильный мороз</td>\
+        </tr>\
+        <tr>\
+            <td>-60 — -36 °C</td>\
+            <td>— опасность обморожения</td>\
+        </tr>\
+        <tr>\
+            <td>ниже -60 °C</td>\
+            <td>— большая опасность обморожения</td>\
+        </tr>\
+    </table></div>"
+
+//=======================================================================================
+
+function toFahrenheit(temp) {
+    return Math.round(1.8 * temp + 32);
+}
+
+// возвращает cookie с именем name, если есть, если нет, то undefined
+function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function viewOptimize(lat, lng) {
+    //LNG - X
+    //LAT - Y
+    //SOUTHWEST - низ лево
+    //NORTHEAST - вверх право
+
+    if (southWest.lng() == -180 && northEast.lng() == 180)
+        return true;
+
+    if ((southWest.lng() < 0 && northEast.lng() > 0)) {
+        if ((lng > southWest.lng() && lng < northEast.lng()) && (lat > southWest.lat() && lat < northEast.lat()))
+            return true;
+        else
+            return false;
+    }
+
+    if ((southWest.lng() > 0 && northEast.lng() > 0) || (southWest.lng() < 0 && northEast.lng() < 0)) {
+        if (zoom == 2) {
+            if (((lng > southWest.lng() && lng < 180) || (lng > -180 && lng < northEast.lng())) && (lat > southWest.lat() && lat < northEast.lat()))
+                return true;
+            else
+                return false;
+        } else {
+            if ((lng > southWest.lng() && lng < northEast.lng()) && (lat > southWest.lat() && lat < northEast.lat()))
+                return true;
+            else
+                return false;
+        }
+    }
+
+    if (southWest.lng() > 0 && northEast.lng() < 0) {
+        if (((lng > southWest.lng() && lng < 180) || (lng > -180 && lng < northEast.lng())) && (lat > southWest.lat() && lat < northEast.lat()))
+            return true;
+        else
+            return false;
+    }
+}
+
+function drawMe() {
+    if (infoBubble)
+        infoBubble.setMinWidth(200);
+
+    index = 0;
+    var swBound;
+    var neBound;
+    var bounds;
+    var url;
+    var curr_color;
+    var myLatLng;
+
+    if (STATUS == 'DEBUG')
+        $('#LOG').text($('#LOG').text() + ' #drawMe_start');
+
+    if (!once) {
+        once = true;
+        if (INFO['id'] != -1 && typeof(INFO['id']) != 'undefined' && zoom != 1)
+            setBorders(INFO['id']);
+    }
+
+    zoom = map.getZoom();
+
+    var j = 0;
+    updateBounds();
+    if (!bounds_ready) {
+        setTimeout(updateBounds, 1000);
+        return false;
+    }
+
+    for (var i = 0; i <= INFO['zoom_amount']; i++) {
+        if (viewOptimize(INFO['latit' + i], INFO['longt' + i])) {
+            Indexes[j] = i;
+
+            url = pregReplaceAll(/_/, " ", INFO['lang' + i][INFO['curr_lang']]);
+
+            if (url == null)
+                url = pregReplaceAll(/_/, " ", INFO['lang' + i][1]);
+
+            if (type == 'black')
+                curr_color = colors['black'];
+            else
+                curr_color = colors[INFO['tcolor' + i]];
+
+            myLatLng = new google.maps.LatLng(INFO['latit' + i], INFO['longt' + i]);
+
+            markers_zoom[j] = new google.maps.Marker(
+                {
+                    position: myLatLng,
+                    map: map,
+                    icon: curr_color,
+                    title: url,
+                    url: "http://" + location.hostname + "/" + INFO['lang' + i][INFO['curr_lang']]
+                });
+
+            google.maps.event.addListener(markers_zoom[j], 'click', function() {
+                window.location.href = this.url;  //changed from markers[i] to this[i]
+            });
+
+            swBound = myLatLng;
+            neBound = myLatLng;
+            bounds = new google.maps.LatLngBounds(swBound, neBound);
+
+            overlays_zoom[j] = new USGSOverlay(bounds, color, map);
+            j++;
+        }
+    }
+    if (!j)
+        $('#think').fadeTo(100, 0.0);
+
+    timeout_flag = false;
+    zoom_flag = false;
+}
+
+function cleanOverlay() {
+    if (STATUS == 'DEBUG')
+        $('#LOG').text($('#LOG').text() + ' #Cleaning');
+
+    for (var i in overlays_zoom) {
+        overlays_zoom[i].setMap(null);
+        markers_zoom[i].setMap(null);
+    }
+
+    if (zoom_flag) {
+        INFO.length = 0;
+        INFO = [];
+    }
+
+    Indexes.length = 0;
+    markers_zoom.length = 0;
+    overlays_zoom.length = 0;
+    markers_zoom = [];
+    Indexes = [];
+}
+
+function zoomChanged() {
+    zoom = map.getZoom();
+    document.cookie = "zoom=" + zoom;
+
+    if (STATUS == 'DEBUG')
+        $('#LOG').text($('#LOG').text() + ' #zoomChanged');
+
+    zoom_flag = true;
+    cleanOverlay();
+    if (STATUS == 'DEBUG')
+        $('#zoom').text(zoom);
+
+    setTimeout(ajaxUpdate, 100);
+}
+
+function reDraw() {
+    if (STATUS == 'DEBUG') {
+        $('#LOG').text(' ');
+        $('#LOG').text($('#LOG').text() + ' #reDraw');
+    }
+    if (!LOCK) {
+        cleanOverlay();
+        drawMe();
+    }
+}
+
+function noSkobka(name, meteo_type) {
+    meteo_type = meteo_type || '';
+    name = $.trim(name);
+
+    if (INFO['curr_lang'] == 8) {
+        if (meteo_type == 'aws') {
+            if (name.indexOf('AWS') != -1)
+                name = name.substring(0, (name.indexOf('AWS')) - 2);
+        } else {
+            if (name.indexOf('(') != -1)
+                name = name.substring(0, name.indexOf('('));
+        }
+    } else {
+        if (name.indexOf('(') != -1)
+            name = name.substring(0, name.indexOf('('));
+    }
+
+    return name;
+}
+
+function noSlash(name) {
+    name = $.trim(name);
+    if (name.indexOf('/') != -1)
+        name = name.substring(0, name.indexOf('/'));
+
+    return name;
+}
+
+function catchError() {
+    alert('ERROR! No Data!');
+    $('#back-wrapper, #closeMap').click();
+    error_flag = true;
+    return false;
+}
+
+function updateBounds() {
+    /*######################################*/
+    if (STATUS == 'DEBUG')
+        $('#LOG').text($('#LOG').text() + ' #UpdatingBounds');
+    /*######################################*/
+
+    bounds = map.getBounds();
+
+    if (map.getBounds() === undefined) {
+
+        /*######################################*/
+        if (STATUS == 'DEBUG')
+            $('#LOG').text($('#LOG').text() + ' #BOUNDS=UNDEFINED!REBOOT');
+        /*######################################*/
+
+        bounds_ready = false;
+    } else {
+        southWest = bounds.getSouthWest();
+        northEast = bounds.getNorthEast();
+        if (!bounds_ready) {
+            bounds_ready = true;
+            drawMe();
+        }
+    }
+}
+
+function setBorders(ID) {
+    if (STATUS == 'DEBUG')
+        $('#LOG').text('settingBorders');
+
+    var layer = new google.maps.FusionTablesLayer(
+        {
+            query:
+            {
+                select: 'geometry',
+                from: '1N2LBk4JHwWpOY4d9fobIn27lfnZ5MDy-NoqqRpk'
+            },
+            heatmap:
+            {
+                enabled: true
+            },
+            styles: [
+                {
+                    polygonOptions:
+                    {
+                        fillColor: '#000000',
+                        fillOpacity: '0',
+                        strokeOpacity: '0'
+                    }
+
+                },
+                {
+                    where: "ISO_2DIGIT NOT EQUAL TO '" + ID + "'",
+                    polygonOptions:
+                    {
+                        fillColor: "#939393",
+                        strokeColor: "#ffffff",
+                        strokeOpacity: '0.1',
+                        fillOpacity: 0.07
+                    }
+                }]
+        });
+
+    layer.setMap(map);
+}
+
+function translate(lang_here) {
+    var color_sheme = lang_here['select_color'];
+    var header = '<b>' + lang_here['header'] + ':</b>';
+    var footer = '<b>' + lang_here['footer'] + '</b>';
+    var higher = lang_here['higher'];
+    var extremely_danger = lang_here['extremely_danger'];
+    var danger = lang_here['danger'];
+    var extremely_careful = lang_here['extremely_careful'];
+    var careful = lang_here['careful'];
+    var TnotDanger = lang_here['TnotDanger'];
+    var extremely_frost = lang_here['extremely_frost'].toLowerCase();
+    var danger_cold = lang_here['danger_cold'].toLowerCase();
+    var big_danger_cold = lang_here['big_danger_cold'].toLowerCase();
+    var lower = lang_here['lower'];
+    var expand = lang_here['expand'];
+    var collapse = lang_here['collapse'];
+
+    /**
+     * Поправка для danger_cold и big_danger_cold на немецком языке
+     */
+    if (lang_now == 'de')
+    {
+        danger_cold = lang_here['danger_cold'];
+        big_danger_cold = lang_here['big_danger_cold'].replace(
+            lang_here['big_danger_cold'].charAt(0),
+            lang_here['big_danger_cold'].charAt(0).toLowerCase()
+        );
+    }
+    /**
+     * Конец
+     */
+
+    if (getCookie('color_sheme'))
+        type = getCookie('color_sheme');
+
+    var reg = /\(\)|（）/;
+    var replace = new Array("<input type='radio' name='curr_color' value='bright' onchange='setColors(this.value)' />", "<input type='radio' name='curr_color' value='black' onchange='setColors(this.value)' />", "<input type='radio' name='curr_color' value='mixed' onchange='setColors(this.value)' checked='checked'/>");
+    var i = 0;
+
+    while (reg.test(color_sheme)) {
+        color_sheme = color_sheme.replace(reg, replace[i]);
+        i++;
+    }
+
+    $('#color_sheme').html(color_sheme);
+
+    $('[value=' + type + ']').attr('checked', true);
+
+    $("#think").attr(
+        {
+            'src': load[type]
+        });
+    $('#think').fadeTo(100, 1.0);
+
+    var heb = false;
+    if (lang_now == 'il' || lang_now == 'ar')
+        heb = true;
+
+    $('#legend_header').html(header);
+    $('#legend_footer').html(footer);
+
+    legend_text_color = legend_text_color.replace("выше", higher);
+    legend_text_color = legend_text_color.replace("чрезвычайно опасно", extremely_danger);
+    legend_text_color = legend_text_color.replace("опасно", danger);
+    legend_text_color = legend_text_color.replace("предельно осторожно", extremely_careful);
+    legend_text_color = legend_text_color.replace("осторожно", careful);
+    legend_text_color = legend_text_color.replace("температуры, не считающиеся опасными", TnotDanger);
+    legend_text_color = legend_text_color.replace("сильный мороз", extremely_frost);
+    legend_text_color = legend_text_color.replace("опасность обморожения", danger_cold);
+    legend_text_color = legend_text_color.replace("ниже", lower);
+    legend_text_color = legend_text_color.replace("большая опасность обморожения", big_danger_cold);
+
+    legend_text_black = legend_text_black.replace("выше", higher);
+    legend_text_black = legend_text_black.replace("чрезвычайно опасно", extremely_danger);
+    legend_text_black = legend_text_black.replace("опасно", danger);
+    legend_text_black = legend_text_black.replace("предельно осторожно", extremely_careful);
+    legend_text_black = legend_text_black.replace("осторожно", careful);
+    legend_text_black = legend_text_black.replace("температуры, не считающиеся опасными", TnotDanger);
+    legend_text_black = legend_text_black.replace("сильный мороз", extremely_frost);
+    legend_text_black = legend_text_black.replace("опасность обморожения", danger_cold);
+    legend_text_black = legend_text_black.replace("ниже", lower);
+    legend_text_black = legend_text_black.replace("большая опасность обморожения", big_danger_cold);
+
+    if (lang_now == 'ko' || lang_now == 'tr') {
+        legend_text_color = legend_text_color.replace(higher + " +54 °C", "+54 °C " + higher);
+        legend_text_color = legend_text_color.replace(lower + " -60 °C", "-60 °C " + lower);
+
+        legend_text_black = legend_text_black.replace(higher + " +54 °C", "+54 °C " + higher);
+        legend_text_black = legend_text_black.replace(lower + " -60 °C", "-60 °C " + lower);
+    }
+
+    var legend_text_colorF = legend_text_color;
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\+54 °C", 'g'), "+129 °F");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\+42", 'g'), "+107");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\+33", 'g'), "+91");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\+41 °C", 'g'), "+106 °F");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\+27", 'g'), "+81");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\+32 °C", 'g'), "+90 °F");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\-24", 'g'), "-12");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\+26 °C", 'g'), "+80 °F");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\-35", 'g'), "-31");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\-25 °C", 'g'), "-13 °F");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\-36 °C", 'g'), "-32 °F");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\-60 °C", 'g'), "-76 °F");
+    legend_text_colorF = legend_text_colorF.replace(new RegExp("\\-60", 'g'), "-76");
+
+    var legend_text_blackF = legend_text_black;
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\+54 °C", 'g'), "+129 °F");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\+42", 'g'), "+107");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\+33", 'g'), "+91");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\+41 °C", 'g'), "+106 °F");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\+27", 'g'), "+81");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\+32 °C", 'g'), "+90 °F");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\-24", 'g'), "-12");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\+26 °C", 'g'), "+80 °F");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\-35", 'g'), "-31");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\-25 °C", 'g'), "-13 °F");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\-36 °C", 'g'), "-32 °F");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\-60 °C", 'g'), "-76 °F");
+    legend_text_blackF = legend_text_blackF.replace(new RegExp("\\-60", 'g'), "-76");
+
+    legend_cook = getCookie('legend');
+
+    if (type == 'black') {
+        if (INFO['value_t'] == 1)
+            $('#legend_wrap').html(legend_text_blackF);
+        else
+            $('#legend_wrap').html(legend_text_black);
+
+        if (legend_cook == 0)
+            $('#legend').css('display', 'none');
+        else
+            $('#legend').css('display', 'block');
+    } else {
+        if (INFO['value_t'] == 1)
+            $('#legend_wrap').html(legend_text_colorF);
+        else
+            $('#legend_wrap').html(legend_text_color);
+
+        if (legend_cook == 0)
+            $('#legend').css('display', 'none');
+        else
+            $('#legend').css('display', 'block');
+    }
+
+    if ($('#legend').css('display') == 'block') {
+        if (legend_cook == 1) {
+            if (lang_now == 'hi') {
+                if (browser == 'firefox') {
+                    legend_text_color = legend_text_color.replace("130px", "215px");
+                    legend_text_colorF = legend_text_colorF.replace("130px", "215px");
+                    legend_text_black = legend_text_black.replace("130px", "215px");
+                    legend_text_blackF = legend_text_blackF.replace("130px", "215px");
+                }
+            }
+        }
+    }
+
+    if (button.collapse == 1)
+        $('#legend_hide_text').text(collapse);
+    if (button.expand == 1)
+        $('#legend_hide_text').text(expand);
+
+    button.collapse = collapse;
+    button.expand = expand;
+
+    $('#legend_hide').css('display', 'block');
+}
+
+function ajaxUpdate() {
+    if (zoom != map.getZoom()) {
+        if (STATUS == 'DEBUG')
+            $('#LOG').text($('#LOG').text() + ' #CATCHED!');
+        zoom = map.getZoom();
+        if (STATUS == 'DEBUG')
+            $('#zoom').text(zoom);
+        setTimeout(ajaxUpdate, 500);
+    } else {
+        if (STATUS == 'DEBUG')
+            var a = Date.now();
+        if (STATUS == 'DEBUG')
+            $('#LOG').text($('#LOG').text() + ' #ajaxUpdate');
+
+        var local_zoom = map.getZoom();
+
+        if (STATUS == 'DEBUG')
+            $('#LOG').text($('#LOG').text() + ' #query_start.(ZOOM: ' + zoom + ')');
+
+        updateBounds();
+        if (!bounds_ready) {
+            setTimeout(ajaxUpdate, 500);
+            return false;
+        }
+
+        var coords = {
+            "sw_lat": southWest.lat(),
+            "sw_lng": southWest.lng(),
+            "ne_lat": northEast.lat(),
+            "ne_lng": northEast.lng()
+        };
+
+        LOCK = true;
+
+        QUEUE = $.ajax(
+            {
+                type: "POST",
+                url: "/responses/reGmap.php",
+                data:
+                {
+                    "ENTER": "TRUE",
+                    "ID": country_id,
+                    "ZOOM": zoom,
+                    "coords": coords,
+                    "l": langId
+                },
+                success: function(data) {
+                    var b = Date.now();
+                    if (STATUS == 'DEBUG')
+                        $('#LOG').text($('#LOG').text() + ' #(' + (b - a) + ') query_end.(ZOOM: ' + zoom + ')');
+                    if (!data)
+                        catchError();
+                    else
+                        error_flag = false;
+
+                    if (local_zoom != map.getZoom()) {
+                        var b = Date.now();
+                        if (STATUS == 'DEBUG')
+                            $('#LOG').text($('#LOG').text() + ' #(' + (b - a) + ')catching query error!aborting.(ZOOM: ' + local_zoom + ')');
+
+                        QUEUE.abort();
+
+                        if (STATUS == 'DEBUG')
+                            $('#LOG').text($('#LOG').text() + ' @@ QUERY ' + local_zoom + ' aborted! @@ ');
+
+                        cleanOverlay();
+
+                        setTimeout(ajaxUpdate, 500);
+                        return false;
+                    } else {
+                        INFO = JSON.parse(data);
+                        LOCK = false;
+
+                        var langs = [];
+                        langs = INFO['all_lang'];
+
+                        translate(langs);
+
+                        drawMe();
+                    }
+                }
+            });
+    }
+}
+
+function setColors(curr_type) {
+    switch (curr_type) {
+        case 'bright':
+            type = 'bright';
+            break;
+        case 'black':
+            type = 'black';
+            break;
+        case 'mixed':
+            type = 'mixed';
+            break;
+    }
+
+    document.cookie = "color_sheme=" + type;
+    legend_cook = getCookie('legend');
+
+    if (type == 'black') {
+        $('#legend_wrap').html(legend_text_black);
+
+        if (legend_cook == 0)
+            $('#legend').css('display', 'none');
+
+        if (infoBubble)
+            markerBubble.setIcon('images/map/icon_black.png');
+    } else {
+        $('#legend_wrap').html(legend_text_color);
+
+        if (legend_cook == 0)
+            $('#legend').css('display', 'none');
+
+        if (infoBubble) {
+            var icon = getTemperatureColor(getTemperatureFromPage());
+            markerBubble.setIcon('images/map/icon_' + icon + '.png');
+        }
+    }
+
+    $('input[type=checkbox]').each(function() {
+        if ($(this).attr('value') != curr_type)
+            $(this).attr('checked', false);
+        else
+            $(this).attr(
+                {
+                    'disabled': true
+                });
+    });
+
+    $("#think").attr(
+        {
+            'src': load[type]
+        });
+    $('#think').fadeTo(100, 1.0);
+    timeout_flag = false;
+    setTimeout(reDraw, timeout);
+}
+
+
+function getLang() {
+    $.ajax(
+        {
+            type: "POST",
+            url: "/responses/reGmap.php",
+            data: "ENTER=TRUE&LANG=TRUE&l="+langId,
+            async: false,
+            success: function(data)
+            {
+                if (!data)
+                    catchError();
+                else
+                    error_flag = false;
+
+                lang_now = data;
+            }
+        });
+}
+
+
+function start() {
+
+    var map_selector = $('#mapa');
+
+    if ($("#switch").html() == 0) {
+        $("#switch").html("1");
+
+        /* ЗУУУУМММ */
+        // map_selector.append("<div id='zoom' style='border:1px solid red;text-align:center;width:25px;height:25px;background:#ffffff;position:fixed;top:53%; left:31%; z-index:996;color:#424242;font-size:17px;font-weight:bold;text-shadow:  #ffffff -2px -2px 0 , #ffffff 2px 2px 0;'>" + zoom + "</div>");
+
+        map_selector.append("<img id='think' style='opacity:0;position:absolute;top:455px; left:35px; z-index:999;width:30px;height:30px;' src='images/map/loading.GIF'>");
+
+        getLang(); // Берем язык
+
+        if (lang_now == 'ar') {
+            arab = "direction:rtl;";
+            $('#closeMap').css('float', 'left');
+        }
+
+        if (lang_now == 'il')
+            arab = "direction:ltr;";
+
+        map_selector.append("<div id='color_sheme' style='" + arab + "font-size:13px;margin: 0 20px 12px 0;'></div>");
+        map_selector.prepend("<div id='map_header' style='" + arab + "font-size:17px;margin: 3px 20px -12px 0;font-weight:bold;'></div>");
+
+        var legend_left = -16;
+        var legend_padding = 15;
+        if (lang_now == 'ar')
+            legend_padding = 11;
+
+        map_selector.append("<div id='legend_header' style='" + arab + "padding: 0 0 0 " + legend_padding + "px;width: 805px;   background:#ffffff;font-size:14px;position:relative; top: 0px; left: " + legend_left + "px;z-index:998;'></div>");
+        map_selector.append("<div id='legend_wrap' style='" + arab + "margin: 12px 0 12px 0;'></div>");
+        map_selector.append("<div id='legend_footer' style='" + arab + "padding: 0 0 0 " + legend_padding + "px;margin-bottom:8px;width: 805px;   background:#ffffff;font-size:14px;position:relative; top: 0px; left: " + legend_left + "px;z-index:998;'></div>");
+
+        var legend_margin = 168;
+
+        /*  if(browser == 'firefox')
+         legend_margin = 171;*/
+
+        map_selector.append("<div id='legend_hide' style='direction:ltr;display:none;position: absolute;left:15px;margin:0 0 0 -15px;cursor:pointer;;width:837px; height:20px; z-index:999;background:url(../images/extremumFooterBg.png) repeat-x'>" +
+            "<span id='legend_hide_text' style='background: url(../images/extremumFooterTitleBg.png) repeat-x;position: absolute;font-size:14px;font-weight:bold;padding:0 15px;color:#727272;'></span>" +
+            "<div class='map_arrow' style='background: url(../images/extremumArrUp.png) no-repeat;'></div></div>");
+
+        if (STATUS == 'DEBUG')
+            map_selector.append("<div id='LOG' style='padding: 0 0 0 15px;width: 250px; height: 50px;  background:#000000;color:#ffffff;font:13px Sans;position:absolute; top: 0px; left: 840px;z-index:998;'></div>");
+
+        if (typeof(value_t) == 'undefined')
+            value_t = 0;
+
+        if (lang[lang_now + value_t])
+            $('#map_header').text(lang[lang_now + value_t]);
+        else
+            $('#map_header').text(lang['en' + value_t]); // Заголовок */
+
+        /*if(country_id != -1)
+         start_zoom = 2;*/
+
+        var latlng = new google.maps.LatLng(latitude, longitude);
+        var myOptions = {
+            zoom: zoom,
+            minZoom: start_zoom,
+            maxZoom: max_zoom,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControlOptions:
+            {
+                mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN],
+                style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+            }
+        };
+
+        var mapStyle = [
+            {
+                "featureType": "administrative.country",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "saturation": 10
+                    },
+                    {
+                        "hue": "#6b6b6b"
+                    },
+                    {
+                        "weight": 1.0
+                    }]
+            },
+            {
+                elementType: "labels",
+                stylers: [
+                    {
+                        visibility: "off"
+                    }]
+            }];
+
+        var map_canvas = document.getElementById("map_canvas");
+
+        map = new google.maps.Map(map_canvas, myOptions);
+        map.setOptions({
+            styles: mapStyle
+        });
+
+        /*
+         * GOOGLE MARKER WITH INFOBUBBLE
+         */
+        if (map_selector.attr('data-content')) {
+            markerBubble = new google.maps.Marker(
+                {
+                    position: latlng,
+                    map: map,
+                    title: map_selector.attr('data-town'),
+                    icon: "images/map/icon_black.png",
+                    url: $('#archive_link').attr('href')
+                });
+            var contentString = "<p id='content_string' style='margin: 0;font-size: 13px;padding-right: 15px'>\
+                                    " + map_selector.attr('data-content') + "\
+                                 </p>";
+
+            infoBubble = new InfoBubble({
+                content: contentString,
+                borderRadius: 0,
+                arrowSize: 5,
+                arrowStyle: -1,
+                shadowStyle: 0,
+                padding: 5,
+                minWidth: $('#content_string').width + 50,
+                minHeight: $('#content_string').height + 50,
+                position: latlng
+            });
+
+            infoBubble.open(map, markerBubble);
+
+            google.maps.event.addListener(markerBubble, 'click', function() {
+                if (!infoBubble.isOpen()) {
+                    infoBubble.open(map, markerBubble);
+                }
+            });
+        }
+
+        /*
+         * IF TARGET CITY
+         */
+        if (infoBubble && type != 'black') {
+            var icon = getTemperatureColor(getTemperatureFromPage());
+            markerBubble.setIcon('images/map/icon_' + icon + '.png');
+        } else if (infoBubble)
+            markerBubble.setIcon('images/map/icon_black.png');
+
+        google.maps.event.addListener( map, 'maptypeid_changed', function() {
+            reDraw();
+        } );
+
+        $('#back-wrapper, #closeMap').click(function() {
+            var date = new Date;
+            date.setDate(date.getDate() + 2);
+            document.cookie = "zoom=" + zoom + ";expires=" + date.toUTCString();
+        });
+
+        if (legend_cook) {
+            if (legend_cook == 0) {
+                $('#legend').css('display', 'none');
+                $('.map_arrow').css(
+                    {
+                        'background': 'url(../images/extremumArrDn.png) no-repeat'
+                    });
+                button.expand = 1;
+            } else
+                button.collapse = 1;
+        }
+        else
+            button.collapse = 1;
+
+        if (lang_now == 'il' || lang_now == 'ar') {
+            // $('#legend_header').css({'top' : '564px'});
+            $('#map_header').css('margin-bottom', '-9px');
+            legend_text_color = legend_text_color.replace("130px", "157px");
+            legend_text_black = legend_text_black.replace("130px", "157px");
+        }
+
+        if (lang_now == 'hi') {
+            if (browser == 'firefox') {
+                $('#legend_header').css('top', '563px');
+                legend_text_color = legend_text_color.replace("130px", "215px");
+                legend_text_black = legend_text_black.replace("130px", "215px");
+                $('#legend_hide').css('margin-top', '230px');
+            }
+        }
+
+        if (lang_now == 'il') {
+            $('#closeMap').css('padding-right', '4px');
+            $('#closeMap').css('margin-top', '1px');
+        }
+
+        if (lang_now == 'ar') {
+            /*
+             * Исправление left: -16px на left: -20px
+             * TODO: переместить в document.ready
+             */
+            legend_text_color = legend_text_color.replace("130px", "215px").replace("-16px", "-20px").replace("805px", "801px");
+            legend_text_black = legend_text_black.replace("130px", "215px").replace("-16px", "-20px").replace("805px", "801px");
+            $('#closeMap').css('padding-bottom', '4px');
+            $('#legend').css(
+                {
+                    'position': 'relative',
+                    'top': '0px',
+                    'left': '-20px',
+                    'width': '802px'
+                });
+        }
+
+        $('#legend_hide').css('display', 'none');
+
+        $('#legend_hide').click(function() {
+            if ($('#legend').css('display') == 'none') {
+
+                $('#legend').slideDown(300);
+                $('.map_arrow').css(
+                    {
+                        'background': 'url(../images/extremumArrUp.png) no-repeat'
+                    });
+                $('#legend_hide_text').text(button.collapse);
+                document.cookie = "legend=1";
+            } else {
+                $('#legend').slideUp(300);
+                $('.map_arrow').css(
+                    {
+                        'background': 'url(../images/extremumArrDn.png) no-repeat'
+                    });
+                $('#legend_hide_text').text(button.expand);
+                document.cookie = "legend=0";
+            }
+        });
+
+        $('#think').fadeTo(100, 1.0);
+
+        setTimeout(ajaxUpdate, 100);
+
+        google.maps.event.addListener(map, 'zoom_changed', function() {
+            timeout_flag = true;
+            if (STATUS == 'DEBUG') {
+                $('#LOG').text(' ');
+                $('#LOG').text($('#LOG').text() + ' #zoom_changed');
+            }
+
+            $('#think').fadeTo(100, 1.0);
+            $("[name=curr_color]").attr(
+                {
+                    'disabled': true
+                });
+            if (STATUS == 'DEBUG')
+                $('#zoom').text(' ');
+        });
+
+        google.maps.event.addListener(map, 'idle', function() {
+            if (timeout_flag && !zoom_flag) {
+                timeout_flag = false;
+                if (STATUS == 'DEBUG')
+                    $('#LOG').text($('#LOG').text() + ' #idle_after - zoom_changed');
+
+                zoomChanged();
+            }
+        });
+
+        google.maps.event.addListener(map, 'dragend', function() {
+            if (!zoom_flag) {
+                timeout_flag = false;
+                if (STATUS == 'DEBUG')
+                    $('#LOG').text($('#LOG').text() + ' #idle_after - zoom_changed');;
+                zoomChanged();
+            }
+        });
+
+    } else {
+        if (value_t != getCookie('value_t')) {
+            value_t = getCookie('value_t');
+            lang[lang_now + value_t] ? $('#map_header').text(lang[lang_now + value_t]) : $('#map_header').text(lang['en' + value_t]); // Заголовок 
+            $("[name=curr_color]").attr(
+                {
+                    'disabled': true
+                });
+            $('#think').fadeTo(100, 1.0);
+            zoomChanged();
+        }
+        if (error_flag) {
+            catchError();
+        }
+    }
+}
+
+function USGSOverlay(bounds, image, map) {
+    this.bounds_ = bounds;
+    this.image_ = image;
+    this.map_ = map;
+    this.div_ = null;
+    this.setMap(map);
+}
+
+USGSOverlay.prototype.onAdd = function() {
+    currTemp = parseInt(INFO['t' + Indexes[index]]);
+
+    if (INFO['value_t'] == 1)
+        currTemp = toFahrenheit(currTemp);
+
+    if (currTemp > 0)
+        currTemp = "+" + currTemp;
+
+    div_class = INFO['tcolor' + Indexes[index]];
+
+    var urlArray = INFO['lang' + Indexes[index]];
+    var townArray = INFO['town' + Indexes[index]];
+
+    if (urlArray[INFO['curr_lang']])
+        url = "http://" + location.hostname + "/" + urlArray[INFO['curr_lang']];
+    else {
+        if (INFO['curr_lang'] == 19 || INFO['curr_lang'] == 5) {
+            if (urlArray['2'])
+                url = "http://" + location.hostname + "/" + urlArray['2'];
+            else
+                url = "http://" + location.hostname + "/" + urlArray['1'];
+        } else
+            url = "http://" + location.hostname + "/" + urlArray['1'];
+    }
+
+    if (townArray[INFO['curr_lang']])
+        town_name = townArray[INFO['curr_lang']];
+    else {
+        if (INFO['curr_lang'] == 19 || INFO['curr_lang'] == 5) {
+            if (townArray['2'])
+                town_name = townArray['2'];
+            else
+                town_name = townArray['1'];
+        } else
+            town_name = townArray['1'];
+    }
+
+    if (zoom < 9) {
+        town_name = noSkobka(noSlash(town_name));
+        /*
+         * Поправка для town_name на корейском
+         */
+        if (lang_now == 'ko')
+            town_name = town_name.replace(" 공항", "");
+    } else {
+        if (town_name.indexOf("/") != -1)
+            town_name = noSkobka(town_name);
+        /*
+         * Поправка для town_name на корейском
+         */
+        if (lang_now == 'ko')
+            town_name = town_name.replace(" 공항", "");
+
+        for (i in meteo) {
+            if (town_name.indexOf(meteo[i]) != -1) {
+                if (INFO['curr_lang'] == 8 && meteo[i] == 'AWS')
+                    town_name = noSkobka(town_name, 'aws');
+                else
+                    town_name = noSkobka(town_name);
+            }
+        }
+    }
+
+    var heb_style = '';
+    var margin_style = '';
+    var margin_temp_style = '';
+
+    if (INFO['curr_lang'] == 7 || INFO['curr_lang'] == 21)
+        heb_style = 'direction:ltr;';
+
+    var div = document.createElement('div');
+    div.style.position = 'absolute';
+
+    town_name = $.trim(town_name);
+
+    if (town_name.length > 9) {
+        if (town_name.indexOf('-') != -1 || town_name.indexOf('(') != -1)
+            div.style.width = "130px";
+        else
+            div.style.width = "10%";
+    }
+
+    if (INFO['curr_lang'] == 8)
+        div.style.width = "10%";
+
+    if (town_name.indexOf('.') != -1 || town_name.indexOf('’') != -1)
+        div.style.width = "10%";
+
+    margin_style = 'margin-top: 7px;margin-left: 6px';
+
+    div.style.height = "25px";
+
+    if (type == 'bright') {
+        color = ' ';
+        curr_class = div_class;
+    }
+
+    /*
+     * CHANGE ROAD MAP TO SATELLITE
+     */
+    var block_style = null;
+
+    if (type == 'black') {
+        curr_class = 'black';
+        div_class = 'black';
+    }
+
+    if (map.getMapTypeId() !== 'hybrid') {
+        if (type !== 'bright')
+            color = '#34383d';
+        block_style = "font-weight:500;letter-spacing:-0.1px;color:" + color + ";text-shadow: #f4f3f0 -1px -1px 0, #f4f3f0 1px 1px 0;";
+    } else {
+        if (type !== 'bright')
+            color = '#f4f3f0';
+        block_style = "font-weight:500;letter-spacing:-0.1px;color:" + color + ";text-shadow: #34383d 1px 0px, #34383d 1px 1px, #34383d 0px 1px, #34383d -1px 1px, #34383d -1px 0px, #34383d -1px -1px, #34383d 0px -1px, #34383d 1px -1px;";
+    }
+
+    if (zoom < 3) {
+        contentString = "<div style='" + margin_style + heb_style + "'>\
+                            <span style='font-size:11px;" + block_style + "' class='" + curr_class + "'>\
+                                <a href='" + url + "'>&nbsp;&nbsp;</a>\
+                                <div class='town_color' id='town_name' style='line-height: 14px;margin-top:-19px;margin-left:5px;word-break:normal'>" + town_name + "</div>\
+                                <div class='" + div_class + "' style='width:30px;font-size:12px; margin-left:7px; margin-top:-3px;'>" + currTemp + "</div>\
+                            </span>\
+                         </div>";
+    } else if (zoom == 3) {
+        contentString = "<div style='" + margin_style + heb_style + "'>\
+                            <span style='font-size:11px;" + block_style + "' class='" + curr_class + "'>\
+                                <a href='" + url + "'>&nbsp;&nbsp;</a>\
+                                <div class='town_color' id='town_name' style='line-height: 14px;margin-top:-23px;margin-left:5px;word-break:normal'>" + town_name + "</div>\
+                                <div class='" + div_class + "' style='width:30px;font-size:13px;margin-left:7px; margin-top:-3px;'>" + currTemp + "</div>\
+                            </span>\
+                         </div>";
+    } else if (zoom == 4) {
+        contentString = "<div style='" + margin_style + heb_style + "'>\
+                            <span style='font-size:12px;" + block_style + "' class='" + curr_class + "'>\
+                                <a href='" + url + "'>&nbsp;&nbsp;</a>\
+                                <div class='town_color' id='town_name' style='line-height: 14px;margin-top:-23px;margin-left:5px;word-break:normal'>" + town_name + "</div>\
+                                <div class='" + div_class + "' style='width:30px;font-size:16px;margin-left:7px; margin-top:-3px;'>" + currTemp + "</div>\
+                            </span>\
+                         </div>";
+    } else {
+        contentString = "<div style='" + margin_style + heb_style + "'>\
+                            <span style='font-size:13px;" + block_style + "' class='" + curr_class + "'>\
+                                <a href='" + url + "'>&nbsp;&nbsp;</a>\
+                                <div class='town_color' id='town_name' style='line-height: 14px;margin-top:-23px;margin-left:5px;word-break:normal'>" + town_name + "</div>\
+                                <div class='" + div_class + "' style='width:30px;font-size:16px;margin-left:7px; margin-top:-3px;'>" + currTemp + "</div>\
+                            </span>\
+                         </div>";
+    }
+    div.innerHTML = contentString;
+
+    this.div_ = div;
+    var panes = this.getPanes();
+    panes.floatPane.appendChild(div);
+    index++;
+    town_name = ' ';
+    url = ' ';
+    currTemp = 0;
+
+    if (index == overlays_zoom.length) {
+        $("[name=curr_color]").not(':checked').attr(
+            {
+                'disabled': false
+            });
+        $('#think').fadeTo(200, 0.0);
+
+
+        if (STATUS == 'DEBUG')
+            $('#LOG').text($('#LOG').text() + '# onAdd' + index + '|' + INFO['zoom_amount']);
+    }
+};
+
+USGSOverlay.prototype.draw = function() {
+    var overlayProjection = this.getProjection();
+
+    var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
+    var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
+
+    var div = this.div_;
+
+    div.style.left = sw.x - 1 + 'px';
+    div.style.top = ne.y - 23 + 'px';
+
+};
+
+USGSOverlay.prototype.onRemove = function() {
+    this.div_.parentNode.removeChild(this.div_);
+    this.div_ = null;
+};
+
+function show_map(latit, longit, set_zoom, countryId) {
+    $('#back-wrapper').fadeIn();
+    $('#mapa').fadeIn();
+
+    if (!latit) {
+        latit = 42.7214;
+        longit = -2.56060;
+        zoom = start_zoom;
+    } else {
+        if (countryId) {
+            zoom = 6;
+            if (countryId == 3) {
+                latit = 54.991482;
+                longit = 82.872173;
+                zoom = 2;
+            } else if (countryId == 2) {
+                zoom = 4;
+                latit = 47.833333;
+                longit = 66.733333;
+            }
+        } else {
+            if (getCookie('zoom') && !set_zoom)
+                zoom = parseInt(getCookie('zoom'));
+            else {
+                zoom = set_zoom || 5;
+                var date = new Date;
+                date.setDate(date.getDate() + 2);
+                document.cookie = "zoom=" + zoom + ";expires=" + date.toUTCString();
+            }
+        }
+    }
+
+    latitude = latit || 0;
+    longitude = longit || 0;
+    country_id = countryId || -1;
+    currTemp = 0;
+    div_class = '';
+    url = '';
+
+    setTimeout(start, timeout);
+}
+
+function pregReplaceAll(pattern, replacement, subject) {
+    while (pattern.test(subject))
+        subject = subject.replace(pattern, replacement);
+
+    return subject;
+}
+
+Number.prototype.Crop = function (x) {
+    var s = this + '';
+    var a = s.split('.');
+    a[1] = a[1] || '';
+    return parseFloat(a[0] + '.' + a[1].substring(0, x));
+};
+
+function getTemperatureColor(temp) {
+    var color;
+
+    if (temp < -60) color = 'blueDanger3';
+    else if (temp < -35) color = 'blueDanger2';
+    else if (temp <= -25) color = 'blueDanger1';
+    else if (temp < 0) color = 'blue';
+    else if (temp > 54) color = 'redDanger4';
+    else if (temp > 41) color = 'redDanger3';
+    else if (temp > 32) color = 'redDanger2';
+    else if (temp >= 27) color = 'redDanger1';
+    else color = 'red';
+    return color;
+}
+
+function getTemperatureFromPage() {
+    var temp = $('#ArchTemp').find('.t_0').first().html();
+    var step = 1;
+
+    if (temp == null) {
+        temp = $('.t_0.dfs').first().html();
+        step = 2;
+        if (temp == null) {
+            temp = $('.t_0').find('b').first().html();
+            step = 3;
+        }
+    }
+
+    console.log(step);
+    return temp;
+}

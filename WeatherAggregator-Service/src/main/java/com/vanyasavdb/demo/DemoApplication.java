@@ -21,7 +21,7 @@ public class DemoApplication {
     CommandLineRunner runner(GetWeather getWeather){
         return args -> {
             //Вызываем функцию для получения списка городов
-            getWeather.getCities();
+            //getWeather.getCities();
             getWeather.testFunction();
         };
     }

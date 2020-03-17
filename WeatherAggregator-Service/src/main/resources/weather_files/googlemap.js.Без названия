@@ -1,0 +1,77 @@
+// массив для карты
+var aMapPlaces = new Array();
+/*
+var aMapPlaces = {
+    0 : {
+        marker : null,
+        pos : [-34.397, 150.644],
+        title : 'Симферополь'
+    },
+    1 : {
+        marker : null,
+        pos : [-34.341, 150.744],
+        title : 'Ялта'
+    }
+};
+*/
+
+function initMap() {
+    var map;
+    var map_canvas;
+    var latlng;
+    var minZoom = 2;
+    var maxZoom = 14;
+    var zoom = 10;
+    var infowindow;
+
+    latlng = new google.maps.LatLng(aMapPlaces[0].pos[0], aMapPlaces[0].pos[1]);
+    var myOptions = {
+        zoom: zoom,
+        minZoom: minZoom,
+        maxZoom: maxZoom,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN],
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+        }
+    };
+
+    var mapStyle = [{
+            "featureType": "administrative.country",
+            "stylers": [{
+                    "visibility": "on"
+                },{
+                    "saturation": 10
+                },{
+                    "hue": "#6b6b6b"
+                },{
+                    "weight": 1.0
+                }]
+        },{
+            elementType: "labels",
+            stylers: [{
+                    visibility: "off"
+                }]
+        }];
+
+    map_canvas = document.getElementById("map-screen");
+    map = new google.maps.Map(map_canvas, myOptions);
+
+    // !Раскоменнтировать если нужно чтобы карта была без названий городов и стран!.
+    /* map.setOptions({
+     styles: mapStyle
+     });*/
+
+    for(var i = 0; i < Object.keys(aMapPlaces).length; i++) {
+        aMapPlaces[i].marker = new google.maps.Marker({
+            position: new google.maps.LatLng(aMapPlaces[i].pos[0], aMapPlaces[i].pos[1]),
+            title:aMapPlaces[i].title
+        });
+        infowindow = new google.maps.InfoWindow({
+            content: aMapPlaces[i].title
+        });
+        aMapPlaces[i].marker.setMap(map);
+        infowindow.open(map, aMapPlaces[i].marker);
+    }
+}

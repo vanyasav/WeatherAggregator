@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WeatherAggregatorService" />
+        <module name="WeatherAggregator-UI" />
         <module name="WeatherAggregator-Service" />
         <module name="WeatherAggregatorUI" />
-        <module name="WeatherAggregator-UI" />
+        <module name="WeatherAggregatorService" />
       </profile>
     </annotationProcessing>
   </component>

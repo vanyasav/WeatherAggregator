@@ -1,0 +1,149 @@
+/*
+ * Created by alex on 11.03.15.
+ */
+var GV_name = '#GeoVidget'; // имя блока с виджетом
+var GV_ID   = '';           // найденный ID НП разными способами
+
+// URL по координатам базы данных IP
+var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 75000
+};
+
+// инициализация геолокации по браузеру
+function StartLocation() {
+    // если геолокация поддерживается
+    if (navigator.geolocation)
+        navigator.geolocation.getCurrentPosition(GeoLocSucces, geolocationFailure, options);
+}
+
+function getLoad(target, load) {
+    if (load == 'in')
+        $(target).find('.geo-vidget').removeClass('geo-load');
+    else {
+        if (load == 'out')
+            $(target).find('.geo-vidget').addClass('geo-load');
+    }
+}
+
+// закрываем виджет
+function close_geo_viget() {
+    $(GV_name).css('display', 'none');
+}
+
+// действия в случае неудачи геолокации по браузеру
+function geolocationFailure(err_num) {
+    getLoad($(GV_name), 'in');
+    console.log('гелокация по навигатору прервана с кодом: ' + err_num);
+}
+
+// если локация в браузере функционирует
+function GeoLocSucces(position) {
+    FromLocator(position.coords.latitude, position.coords.longitude, 'locator');
+}
+
+// резервируем блок под виджет
+function CreateGeoVidget(vidget, style) {
+    $('body').append(style + '<div id="' + vidget.substring(1) + '"></div>');
+    $(GV_name).css('left', parseInt($(window).width()/2-290, 10) + 'px');
+}
+
+function AddGeoVidget(mode) {
+    if (mode == 'ip') FromIP(mode);
+    else if (mode == 'locator') StartLocation();
+    else FromLang(mode);
+    addCookie('located', 1);
+}
+
+function FromLang(mode) {
+    try {
+        $.ajax({
+            url: "responses/reGeoVidget.php",
+            type: "POST",
+            timeout: 10000,
+            data: {mode: mode, langid: langId},
+            success:
+                function(data) {
+                    if (data != '') {
+                        var rezult = JSON.parse(data);
+                        if ($(GV_name).length == 0)
+                            CreateGeoVidget(GV_name, rezult['style']);
+                        GV_ID = rezult['id'];
+                        $(GV_name).html(rezult['html']);
+                    }
+                },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {}
+        }).done(function() {
+            FromIP('ip');
+        });
+    } catch(e) {
+        FromIP('ip');
+    }
+}
+
+function FromIP(mode){
+    try {
+        $.ajax({
+            beforeSend: function() { getLoad($(GV_name), 'out'); },
+            url: "responses/reGeoVidget.php",
+            type: "POST",
+            timeout: 10000,
+            data: {mode: mode, langid: langId},
+            success:
+                function(data) {
+                    if (data != '') {
+                        var rezult = JSON.parse(data);
+                        if ($(GV_name).length == 0)
+                            CreateGeoVidget(GV_name, rezult['style']);
+                        if (GV_ID != rezult['id'] && rezult['id'] > 0) {
+                            GV_ID = rezult['id'];
+                            $(GV_name).html(rezult['html']);
+                            getLoad($(GV_name), 'in');
+                        }
+                    }
+                },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {}
+        }).done(function() {
+            getLoad($(GV_name), 'in');
+            StartLocation();
+        });
+    } catch(e) {
+        StartLocation();
+    }
+}
+
+// URL по координатам браузера
+function FromLocator(brow_lat, brow_lng, mode) {
+    try {
+        $.ajax({
+            beforeSend: function() { getLoad($(GV_name), 'out'); },
+            url: "responses/reGeoVidget.php",
+            type: "POST",
+            data: {lat: brow_lat, lng: brow_lng, mode: mode, langid: langId},
+            timeout: 10000,
+            success:
+                function(data) {
+                    var rezult = JSON.parse(data);
+                    data = JSON.parse(data);
+                    if ($(GV_name).length == 0)
+                        CreateGeoVidget(GV_name, rezult['style']);
+                    if (data != '') {
+                        if (GV_ID != rezult['id'] && rezult['id'] > 0) {
+                            //если найденный ID НП не совпадает с найденным по IP
+                            GV_ID = rezult['id'];
+                            $(GV_name).html(rezult['html']);
+                            getLoad($(GV_name), 'in');
+                        }
+                    }
+                },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                $(GV_name).removeClass('geo-load');
+            }
+        }).done(function() {
+            getLoad($(GV_name), 'in');
+        });
+    } catch(e) {
+        getLoad($(GV_name), 'in');
+    }
+}

@@ -28,6 +28,20 @@ import java.util.Properties;
 @Component
 public class GetWeather {
 
+    private File getFileFromResources(String fileName) {
+
+        ClassLoader classLoader = getClass().getClassLoader();
+
+        URL resource = classLoader.getResource(fileName);
+        if (resource == null) {
+            throw new IllegalArgumentException("file is not found!");
+        } else {
+            return new File(resource.getFile());
+        }
+
+    }
+
+
     //Массив для хранения списка городов
     private ArrayList<String> cities = new ArrayList<>();
 
@@ -117,10 +131,19 @@ public class GetWeather {
         }
     }
 
+    private void parseTemperature(Elements elements) {
+        for (Element element : elements) {
+            //System.out.println(element);
+            String temperature = element.ownText();
+            System.out.println(temperature);
+        }
+    }
 
     private void parseSpeed(Elements elements) {
         for (Element element : elements) {
             //Выделяем информацию об облаках
+            String test = element.ownText();
+            System.out.println(test);
             String elem = element.attr("onmouseover");
             //System.out.println(elem);
             if (elem == "")
@@ -148,7 +171,7 @@ public class GetWeather {
     public void testFunction() {
         try {
 
-            File input = new File("C:\\Users\\savilov\\Documents\\WeatherAggregator\\WeatherAggregator-Service\\src\\main\\resources\\test.html");
+            File input = getFileFromResources("weather.html");
             Document doc = Jsoup.parse(input, "UTF-8");
 
             /**
@@ -158,9 +181,8 @@ public class GetWeather {
              .get();
              **/
             //parseClouds(doc.select("#forecastTable_1 div.cc_0 div"));
-
             parseSpeed(doc.select("#forecastTable_1 div.wv_0"));
-
+            //parseTemperature(doc.select("#forecastTable_1 div.t_0 b"));
 
         } catch (IOException e) {
             System.out.println("Unable to get data");
