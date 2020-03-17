@@ -139,11 +139,18 @@ public class GetWeather {
         }
     }
 
+    private void parseDirection(Elements elements) {
+        for (Element element : elements) {
+            //System.out.println(element);
+            String direction = element.ownText();
+            System.out.println(direction);
+        }
+    }
+
+
     private void parseSpeed(Elements elements) {
         for (Element element : elements) {
             //Выделяем информацию об облаках
-            String test = element.ownText();
-            System.out.println(test);
             String elem = element.attr("onmouseover");
             //System.out.println(elem);
             if (elem == "")
@@ -161,17 +168,16 @@ public class GetWeather {
                 j = elem.indexOf('\'');
                 gust = data.substring(7, j - 5);
                 System.out.println("СКОРОСТЬ ВЕТРА: " + speed + " м/с" + ", ПОРЫВЫ ВЕТРА: " + gust + " м/с");
-                //System.out.println(data);
             }
             if (gust == "")
                 System.out.println("СКОРОСТЬ ВЕТРА: " + speed + " м/с");
         }
-
     }
+
     public void testFunction() {
         try {
 
-            File input = getFileFromResources("weather.html");
+            File input = getFileFromResources("test.html");
             Document doc = Jsoup.parse(input, "UTF-8");
 
             /**
@@ -180,9 +186,11 @@ public class GetWeather {
              .referrer("http://www.google.com")
              .get();
              **/
+
             //parseClouds(doc.select("#forecastTable_1 div.cc_0 div"));
-            parseSpeed(doc.select("#forecastTable_1 div.wv_0"));
+            //parseSpeed(doc.select("#forecastTable_1 div.wv_0"));
             //parseTemperature(doc.select("#forecastTable_1 div.t_0 b"));
+            //parseDirection(doc.select("#forecastTable_1").select("td.grayLittlen, td.grayLittlen2,td.grayLittled2"));
 
         } catch (IOException e) {
             System.out.println("Unable to get data");
